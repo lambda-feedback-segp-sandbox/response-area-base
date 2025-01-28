@@ -1,0 +1,10 @@
+.resAreaContainer {
+  padding: 1rem;
+}
+
+.response-area {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
