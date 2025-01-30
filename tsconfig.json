@@ -17,18 +17,7 @@
     "noUncheckedIndexedAccess": true,
     "downlevelIteration": true,
     "jsx": "preserve",
-    "baseUrl": ".",
-    "paths": {
-      "@components/*": ["components/*"],
-      "@modules/*": ["modules/*"],
-      "@api": ["api"],
-      "@api/*": ["api/*"],
-      "@hooks/*": ["hooks/*"],
-      "@services/*": ["services/*"],
-      "@utils/*": ["utils/*"],
-      "@styles": ["styles"],
-      "@styles/*": ["styles/*"]
-    }
+    "baseUrl": "."
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/_error.js"],
   "exclude": ["node_modules"]
