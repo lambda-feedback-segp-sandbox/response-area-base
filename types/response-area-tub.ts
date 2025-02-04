@@ -188,3 +188,25 @@ export abstract class ResponseAreaTub {
     throw new Error('Not implemented')
   }
 }
+
+export function initialiseTub(
+  tub: ResponseAreaTub,
+  response: Record<string, unknown> | undefined,
+  displayMode: 'normal' | 'peek',
+) {
+  if (response === undefined || displayMode === 'peek') {
+    tub.initWithDefault()
+  } else if (
+    '__typename' in response &&
+    response.__typename === 'TeacherModularResponse'
+  ) {
+    tub.initWithTeacherFragment(response as TeacherModularResponseFragment)
+  } else if (
+    '__typename' in response &&
+    response.__typename === 'StudentModularResponse'
+  ) {
+    tub.initWithStudentFragment(response as StudentModularResponseFragment)
+  } else {
+    tub.initWithResponse(response as IModularResponseSchema)
+  }
+}
