@@ -1,6 +1,6 @@
 {
-  "name": "@lambda-feedback-segp-sandbox/response-area-base",
-  "version": "1.1.0",
+  "name": "@lambda-feedback/response-area-base",
+  "version": "1.0.0",
   "scripts": {
     "format": "prettier --write \"**/*.{js,json,ts,tsx}\"",
     "lint": "eslint .",
@@ -9,7 +9,7 @@
     "test": "yarn test:types && yarn lint --max-warnings=0"
   },
   "dependencies": {
-    "@lambda-feedback-segp-sandbox/graphql-api": "^1.0.0",
+    "@lambda-feedback/graphql-api": "^1.0.0",
     "react": "^18.3.1",
     "react-query": "^3.39.0",
     "zod": "^3.14.4"
