@@ -179,12 +179,12 @@ export abstract class ResponseAreaTub {
   }
 
   /** Component for rendering the response area input. */
-  InputComponent: React.FC<BaseResponseAreaProps> = props => {
+  InputComponent(props: BaseResponseAreaProps): HTMLElement {
     throw new Error('Not implemented')
   }
 
   /** Component for rendering the response area wizard. */
-  WizardComponent: React.FC<BaseResponseAreaWizardProps> = props => {
+  WizardComponent(props: BaseResponseAreaWizardProps): HTMLElement {
     throw new Error('Not implemented')
   }
 }

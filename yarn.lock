@@ -523,10 +523,10 @@
     wrap-ansi "^8.1.0"
     wrap-ansi-cjs "npm:wrap-ansi@^7.0.0"
 
-"@lambda-feedback-segp-sandbox/graphql-api@0.1.0":
-  version "0.1.0"
-  resolved "https://npm.pkg.github.com/download/@lambda-feedback-segp-sandbox/graphql-api/0.1.0/2cdc62ca45bdab4e45470008baddaa487e643ceb#2cdc62ca45bdab4e45470008baddaa487e643ceb"
-  integrity sha512-WL8Pxpuhf586kf2UB5mDrHZHsbaFnqI9719CV1f3iv8feVqpy3kNCPISa5qo6jYrlSEeabmmco8G14wAaaVXIA==
+"@lambda-feedback-segp-sandbox/graphql-api@^1.0.0":
+  version "1.2.0"
+  resolved "https://npm.pkg.github.com/download/@lambda-feedback-segp-sandbox/graphql-api/1.2.0/813076a840a5c85289bb063d3215149461dee78c#813076a840a5c85289bb063d3215149461dee78c"
+  integrity sha512-e2mTV0rKlmWUCCTOGYMZh4kVRy9XvaAwKgjmx7+LGRMOUtd/zxFvzU7eG6/Qz88gbgJNu5YAteHAunmYB1u0cw==
   dependencies:
     axios "^1.7.2"
     eslint-config-prettier "^9.1.0"
@@ -535,6 +535,7 @@
     firebase "^11.0.1"
     graphql "^15.6.0"
     graphql-request "^4.3.0"
+    graphql-tag "^2.11.0"
     lodash "^4.17.21"
     react-query "^3.39.0"
     zod "^3.14.4"
@@ -1797,6 +1798,13 @@ graphql-request@^4.3.0:
     cross-fetch "^3.1.5"
     extract-files "^9.0.0"
     form-data "^3.0.0"
+
+graphql-tag@^2.11.0:
+  version "2.12.6"
+  resolved "https://registry.yarnpkg.com/graphql-tag/-/graphql-tag-2.12.6.tgz#d441a569c1d2537ef10ca3d1633b48725329b5f1"
+  integrity sha512-FdSNcu2QQcWnM2VNvSCCDCVS5PpPqpzgFT8+GXzqJuoDd0CBncxCY278u4mhRO7tMgo2JjgJA5aZ+nWSQ/Z+xg==
+  dependencies:
+    tslib "^2.1.0"
 
 graphql@^15.6.0:
   version "15.10.1"
