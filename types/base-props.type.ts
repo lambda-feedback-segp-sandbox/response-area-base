@@ -68,10 +68,10 @@ export interface BaseResponseAreaProps {
   isTeacherMode?: boolean
 
   /** Text displayed before the response area. */
-  preResponseText?: string | null
+  preResponseText?: string
 
   /** Text displayed after the response area. */
-  postResponseText?: string | null
+  postResponseText?: string
 
   /** Indicates if the check operation is loading. */
   checkIsLoading?: boolean
