@@ -3,6 +3,7 @@ import {
   StudentModularResponseFragment,
   TeacherCreateResponseInput,
 } from '@lambda-feedback-segp-sandbox/graphql-api/api/graphql'
+import { JSX } from 'react'
 import { ZodSchema } from 'zod'
 
 import {
@@ -15,6 +16,7 @@ import {
   BaseResponseAreaProps,
   BaseResponseAreaWizardProps,
 } from './base-props.type'
+
 
 /**
  * Abstract class representing a response area component with various configuration and response handling methods.
