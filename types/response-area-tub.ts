@@ -179,12 +179,12 @@ export abstract class ResponseAreaTub {
   }
 
   /** Component for rendering the response area input. */
-  InputComponent(props: BaseResponseAreaProps): HTMLElement {
+  InputComponent(props: BaseResponseAreaProps): JSX.Element {
     throw new Error('Not implemented')
   }
 
   /** Component for rendering the response area wizard. */
-  WizardComponent(props: BaseResponseAreaWizardProps): HTMLElement {
+  WizardComponent(props: BaseResponseAreaWizardProps): JSX.Element {
     throw new Error('Not implemented')
   }
 }
