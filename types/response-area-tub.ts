@@ -3,7 +3,7 @@ import {
   StudentModularResponseFragment,
   TeacherCreateResponseInput,
 } from '@lambda-feedback-segp-sandbox/graphql-api/api/graphql'
-import { JSX } from 'react'
+import React from 'react'
 import { ZodSchema } from 'zod'
 
 import {
@@ -16,7 +16,6 @@ import {
   BaseResponseAreaProps,
   BaseResponseAreaWizardProps,
 } from './base-props.type'
-
 
 /**
  * Abstract class representing a response area component with various configuration and response handling methods.
@@ -181,12 +180,12 @@ export abstract class ResponseAreaTub {
   }
 
   /** Component for rendering the response area input. */
-  InputComponent(props: BaseResponseAreaProps): JSX.Element {
+  InputComponent: React.FC<BaseResponseAreaProps> = props => {
     throw new Error('Not implemented')
   }
 
   /** Component for rendering the response area wizard. */
-  WizardComponent(props: BaseResponseAreaWizardProps): JSX.Element {
+  WizardComponent: React.FC<BaseResponseAreaWizardProps> = props => {
     throw new Error('Not implemented')
   }
 }
