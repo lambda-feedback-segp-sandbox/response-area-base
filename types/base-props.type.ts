@@ -7,6 +7,7 @@ import {
   IModularResponseSchema,
   IResponseAreaAnswerSchema,
 } from '../schemas/question-form.schema'
+import { JsonNestedSchema } from '../utils/json'
 
 /**
  * Represents a subset of feedback properties from StandardSubmissionFragment.
@@ -27,7 +28,7 @@ export interface BaseResponseAreaProps {
   handleDraftSave?: () => void
 
   /** Configuration object for the response area. */
-  config?: object
+  config?: JsonNestedSchema
 
   /** The answer provided in the response area. */
   answer?: IModularResponseSchema['answer']
@@ -103,7 +104,7 @@ export interface BaseResponseAreaWizardProps {
 export interface FullResponseAreaWizardProps
   extends BaseResponseAreaWizardProps {
   /** Configuration object for the wizard response area. */
-  config: object
+  config: JsonNestedSchema
 
   /** The answer schema for the wizard response area. */
   answer: IResponseAreaAnswerSchema
