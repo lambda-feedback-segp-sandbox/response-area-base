@@ -22,46 +22,46 @@ import {
  */
 export abstract class ResponseAreaTub {
   /** The response type identifier. */
-  public readonly responseType?: string
+  readonly responseType?: string
 
   /** Whether LaTeX can be toggled in statistics. */
-  public readonly canToggleLatexInStats: boolean = false
+  readonly canToggleLatexInStats: boolean = false
 
   /** Whether pre-response text is delegated. */
-  public readonly delegatePreResponseText: boolean = true
+  readonly delegatePreResponseText: boolean = true
 
   /** Whether post-response text is delegated. */
-  public readonly delegatePostResponseText: boolean = true
+  readonly delegatePostResponseText: boolean = true
 
   /** Whether live preview is delegated. */
-  public readonly delegateLivePreview: boolean = true
+  readonly delegateLivePreview: boolean = true
 
   /** Whether feedback is delegated. */
-  public readonly delegateFeedback: boolean = true
+  readonly delegateFeedback: boolean = true
 
   /** Whether check functionality is delegated. */
-  public readonly delegateCheck: boolean = true
+  readonly delegateCheck: boolean = true
 
   /** Whether error messages are delegated. */
-  public readonly delegateErrorMessage: boolean = true
+  readonly delegateErrorMessage: boolean = true
 
   /** Whether to display in a flex container. */
-  public readonly displayInFlexContainer: boolean = true
+  readonly displayInFlexContainer: boolean = true
 
   /** Whether to display wide input. */
-  public readonly displayWideInput: boolean = false
+  readonly displayWideInput: boolean = false
 
   /** Whether to always display in a column. */
-  public readonly displayAlwaysInColumn: boolean = false
+  readonly displayAlwaysInColumn: boolean = false
 
   /** Schema for validating the configuration. */
-  protected configSchema?: ZodSchema
+  configSchema?: ZodSchema
 
   /** The parsed configuration object. */
   protected config?: JsonNestedSchema
 
   /** Schema for validating the answer. */
-  protected answerSchema?: ZodSchema
+  answerSchema?: ZodSchema
 
   /** The extracted answer data. */
   protected answer?: any
