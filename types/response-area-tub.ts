@@ -58,7 +58,10 @@ export abstract class ResponseAreaTub {
   abstract readonly configSchema: ZodSchema
 
   /** The parsed configuration object. */
-  protected config?: JsonNestedSchema
+  protected _config?: JsonNestedSchema
+  get config(): JsonNestedSchema | undefined {
+    return this._config
+  }
 
   /** Schema for validating the answer. */
   abstract readonly answerSchema: ZodSchema
@@ -75,7 +78,7 @@ export abstract class ResponseAreaTub {
     const parsedConfig = this.configSchema.safeParse(provided)
     if (!parsedConfig.success) throw new Error('Could not extract config')
 
-    this.config = parsedConfig.data
+    this._config = parsedConfig.data
   }
 
   /** Extracts and validates the answer from the provided data. */
