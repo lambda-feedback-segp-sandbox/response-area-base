@@ -55,13 +55,13 @@ export abstract class ResponseAreaTub {
   readonly displayAlwaysInColumn: boolean = false
 
   /** Schema for validating the configuration. */
-  configSchema?: ZodSchema
+  abstract readonly configSchema: ZodSchema
 
   /** The parsed configuration object. */
   protected config?: JsonNestedSchema
 
   /** Schema for validating the answer. */
-  answerSchema?: ZodSchema
+  abstract readonly answerSchema: ZodSchema
 
   /** The extracted answer data. */
   protected answer?: any
