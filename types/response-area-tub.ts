@@ -4,7 +4,7 @@ import {
   TeacherCreateResponseInput,
 } from '@lambda-feedback-segp-sandbox/graphql-api/api/graphql'
 import React from 'react'
-import { z, ZodSchema } from 'zod'
+import { ZodSchema } from 'zod'
 
 import {
   IModularResponseSchema,
@@ -55,7 +55,7 @@ export abstract class ResponseAreaTub {
   readonly displayAlwaysInColumn: boolean = false
 
   /** Schema for validating the configuration. */
-  readonly configSchema: ZodSchema = z.undefined()
+  readonly configSchema?: ZodSchema
 
   /** The parsed configuration object. */
   protected _config?: JsonNestedSchema
