@@ -67,7 +67,10 @@ export abstract class ResponseAreaTub {
   abstract readonly answerSchema: ZodSchema
 
   /** The extracted answer data. */
-  protected answer?: any
+  protected _answer?: any
+  get answer(): any {
+    return this._answer
+  }
 
   constructor() {}
 
@@ -88,7 +91,7 @@ export abstract class ResponseAreaTub {
     const parsedAnswer = this.answerSchema.safeParse(provided)
     if (!parsedAnswer.success) throw new Error('Could not extract answer')
 
-    this.answer = parsedAnswer.data
+    this._answer = parsedAnswer.data
   }
 
   /** Initializes the response area with default values. */

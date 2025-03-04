@@ -1,6 +1,6 @@
 {
   "name": "@lambda-feedback-segp-sandbox/response-area-base",
-  "version": "3.2.2",
+  "version": "3.3.0",
   "scripts": {
     "format": "prettier --write \"**/*.{js,json,ts,tsx}\"",
     "lint": "eslint .",
