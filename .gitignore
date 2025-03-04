@@ -6,3 +6,6 @@
 
 # TypeScript
 tsconfig.tsbuildinfo
+
+# Docs
+docs/

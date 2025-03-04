@@ -24,3 +24,37 @@ jobs:
         run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  doc:
+    name: Documentation
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20.14.0'
+          registry-url: 'https://npm.pkg.github.com'
+      - run: yarn install
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: yarn typedoc --entryPointStrategy expand hooks/ schemas/ types/ utils/
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./docs 
+
+  docs-deploy:
+    name: Deploy Documentation
+    needs: doc
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      pages: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
